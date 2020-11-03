@@ -1,1 +1,1 @@
-# qa-ninja-selenide
+# Selenide: Automação de ponta a ponta em Java 
