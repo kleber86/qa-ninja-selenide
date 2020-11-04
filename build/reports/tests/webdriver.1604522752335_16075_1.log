@@ -1,0 +1,253 @@
+[1604522752,457][INFO]: Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 27351
+[1604522752,457][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1604522752,720][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "/home/kleber/qa-ninja-selenide/build/downloads/1604522751880_16075_1",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "/home/kleber/qa-ninja-selenide/build/downloads/1604522751880_16075_1",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1604522752,721][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "/home/kleber/qa-ninja-selenide/build/downloads/1604522751880_16075_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1604522752,721][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1604522752,721][INFO]: Launching chrome: /usr/bin/google-chrome --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/tmp/.com.google.Chrome.pvhgvA data:,
+[1604522754,098][INFO]: resolved localhost to ["127.0.0.1"]
+[1604522754,107][INFO]: resolved localhost to ["127.0.0.1"]
+[1604522754,145][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "86.0.4240.183",
+      "chrome": {
+         "chromedriverVersion": "86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378})",
+         "userDataDir": "/tmp/.com.google.Chrome.pvhgvA"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:42653"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "linux",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "9346d9ecfcacdd6d45335e1fa008bc36"
+}
+[1604522754,190][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND SetWindowRect {
+   "height": 768,
+   "width": 1366
+}
+[1604522754,190][INFO]: Waiting for pending navigations...
+[1604522754,191][INFO]: Done waiting for pending navigations. Status: ok
+[1604522754,294][INFO]: Waiting for pending navigations...
+[1604522754,294][INFO]: Done waiting for pending navigations. Status: ok
+[1604522754,294][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE SetWindowRect {
+   "height": 1015,
+   "width": 1366,
+   "x": 10,
+   "y": 29
+}
+[1604522754,303][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1604522754,303][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE SetTimeouts
+[1604522754,312][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND Navigate {
+   "url": "http://ninjaplus-web:5000/login"
+}
+[1604522754,313][INFO]: Waiting for pending navigations...
+[1604522754,313][INFO]: Done waiting for pending navigations. Status: ok
+[1604522754,352][INFO]: Waiting for pending navigations...
+[1604522756,652][INFO]: Done waiting for pending navigations. Status: ok
+[1604522756,652][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE Navigate
+[1604522756,656][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND GetTitle {
+
+}
+[1604522756,656][INFO]: Waiting for pending navigations...
+[1604522756,657][INFO]: Done waiting for pending navigations. Status: ok
+[1604522756,659][INFO]: Waiting for pending navigations...
+[1604522756,660][INFO]: Done waiting for pending navigations. Status: ok
+[1604522756,660][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE GetTitle "Ninja+"
+[1604522756,670][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND GetTitle {
+
+}
+[1604522756,670][INFO]: Waiting for pending navigations...
+[1604522756,671][INFO]: Done waiting for pending navigations. Status: ok
+[1604522756,672][INFO]: Waiting for pending navigations...
+[1604522756,673][INFO]: Done waiting for pending navigations. Status: ok
+[1604522756,673][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE GetTitle "Ninja+"
+[1604522756,677][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND Navigate {
+   "url": "https://www.globo.com/"
+}
+[1604522756,678][INFO]: Waiting for pending navigations...
+[1604522756,678][INFO]: Done waiting for pending navigations. Status: ok
+[1604522756,924][INFO]: Waiting for pending navigations...
+[1604522761,176][INFO]: Done waiting for pending navigations. Status: ok
+[1604522761,176][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE Navigate
+[1604522761,179][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND GetTitle {
+
+}
+[1604522761,179][INFO]: Waiting for pending navigations...
+[1604522761,185][INFO]: Done waiting for pending navigations. Status: ok
+[1604522761,193][INFO]: Waiting for pending navigations...
+[1604522761,194][INFO]: Done waiting for pending navigations. Status: ok
+[1604522761,194][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE GetTitle "globo.com - Absolutamente tudo sobre notícias, esportes e entretenimento"
+[1604522761,199][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND GetTitle {
+
+}
+[1604522761,200][INFO]: Waiting for pending navigations...
+[1604522761,212][INFO]: Done waiting for pending navigations. Status: ok
+[1604522761,217][INFO]: Waiting for pending navigations...
+[1604522761,218][INFO]: Done waiting for pending navigations. Status: ok
+[1604522761,218][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE GetTitle "globo.com - Absolutamente tudo sobre notícias, esportes e entretenimento"
+[1604522761,223][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND Navigate {
+   "url": "https://www.google.com.br/"
+}
+[1604522761,223][INFO]: Waiting for pending navigations...
+[1604522761,224][INFO]: Done waiting for pending navigations. Status: ok
+[1604522761,529][INFO]: Waiting for pending navigations...
+[1604522762,986][INFO]: Done waiting for pending navigations. Status: ok
+[1604522762,986][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE Navigate
+[1604522762,989][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND GetTitle {
+
+}
+[1604522762,989][INFO]: Waiting for pending navigations...
+[1604522762,989][INFO]: Done waiting for pending navigations. Status: ok
+[1604522762,993][INFO]: Waiting for pending navigations...
+[1604522762,994][INFO]: Done waiting for pending navigations. Status: ok
+[1604522762,994][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE GetTitle "Google"
+[1604522762,998][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND GetTitle {
+
+}
+[1604522762,998][INFO]: Waiting for pending navigations...
+[1604522762,998][INFO]: Done waiting for pending navigations. Status: ok
+[1604522763,000][INFO]: Waiting for pending navigations...
+[1604522763,000][INFO]: Done waiting for pending navigations. Status: ok
+[1604522763,000][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE GetTitle "Google"
+[1604522763,004][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND Navigate {
+   "url": "https://www.uol.com.br/"
+}
+[1604522763,004][INFO]: Waiting for pending navigations...
+[1604522763,005][INFO]: Done waiting for pending navigations. Status: ok
+[1604522763,310][INFO]: Waiting for pending navigations...
+[1604522768,199][INFO]: Done waiting for pending navigations. Status: ok
+[1604522768,199][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE Navigate
+[1604522768,203][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND GetTitle {
+
+}
+[1604522768,203][INFO]: Waiting for pending navigations...
+[1604522768,233][INFO]: Done waiting for pending navigations. Status: ok
+[1604522768,260][INFO]: Waiting for pending navigations...
+[1604522770,202][INFO]: Done waiting for pending navigations. Status: ok
+[1604522770,202][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE GetTitle "UOL - O melhor conteúdo"
+[1604522770,216][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] COMMAND Quit {
+
+}
+[1604522770,266][INFO]: [9346d9ecfcacdd6d45335e1fa008bc36] RESPONSE Quit

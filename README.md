@@ -9,3 +9,4 @@ Configuração do Ambiente
  - Configuração do TestNG
  - Configuração do Selenium Java
  - Configuração do Selenide
+ - Iniciando o primeiro teste com TestNG
