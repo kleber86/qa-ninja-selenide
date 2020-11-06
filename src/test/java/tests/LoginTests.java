@@ -1,19 +1,17 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import org.testng.annotations.*;
-import pages.LoginPage;
-import pages.SideBar;
+import common.BaseTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.isChrome;
 
-public class LoginTests {
+public class LoginTests extends BaseTest {
 
-    protected static LoginPage login;
-    protected static SideBar side;
 
     @DataProvider(name = "login-alerts")
     public Object[][] loginProvider() {
@@ -25,13 +23,7 @@ public class LoginTests {
         };
     }
 
-    @BeforeMethod
-    public void start() {
-        Configuration.browser = "chrome";
-        Configuration.baseUrl = "http://ninjaplus-web:5000";
-        login = new LoginPage();
-        side = new SideBar();
-    }
+
 
     @Test
     public void shouldSeeLoggedUser() {

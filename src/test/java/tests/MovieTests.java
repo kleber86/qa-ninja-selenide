@@ -1,29 +1,16 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
+import common.BaseTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.LoginPage;
-import pages.MoviePage;
-import pages.SideBar;
 
 import static com.codeborne.selenide.Condition.text;
 
-public class MovieTests {
+public class MovieTests extends BaseTest {
 
-    private static LoginPage login;
-    private static SideBar side;
-    private static MoviePage movie;
 
     @BeforeMethod
-    public void setup(){
-        Configuration.browser = "chrome";
-        Configuration.baseUrl = "http://ninjaplus-web:5000";
-
-        login = new LoginPage();
-        side = new SideBar();
-        movie = new MoviePage();
-
+    public void setup() {
         login
                 .open()
                 .with("klebernascimento@outlook.com.br", "pwd123");
@@ -32,7 +19,7 @@ public class MovieTests {
     }
 
     @Test
-    public void shouldRegisterANewMovie(){
+    public void shouldRegisterANewMovie() {
         String title = "Jumanji - Proxima Fase";
 
         movie.add().create(title);

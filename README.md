@@ -8,6 +8,12 @@
  
  ## Introdução ao Selenide
  - Iniciando com TestNG
+   > Framework de teste inspirado no JUnit e NUnit, Configurações flexíveis, Anotações e/ou Data providers.
  - Hello Selenide
+   >
  - Preenchendo formulários automaticamente
  - Selenide x WebDriver
+
+
+#### Tecnologias utilizadas:
+> Docker, Kubuntu, TestNG, Selenium, Maven, Selenide

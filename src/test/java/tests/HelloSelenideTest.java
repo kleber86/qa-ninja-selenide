@@ -16,21 +16,21 @@ public class HelloSelenideTest {
         assertEquals(title(), "Ninja+");
     }
 
-    @Test
+    //@Test
     public void acessaGoogle() {
         isChrome();
         open("https://www.google.com.br/");
         assertEquals(title(), "Google");
     }
 
-    @Test
+    //@Test
     public void acessaGlobo() {
         isChrome();
         open("https://www.globo.com/");
         assertEquals(title(), "globo.com - Absolutamente tudo sobre notícias, esportes e entretenimento");
     }
 
-    @Test
+    //@Test
     public void acessaUol() {
         isChrome();
         open("https://www.uol.com.br/");
