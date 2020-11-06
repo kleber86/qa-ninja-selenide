@@ -1,3 +1,5 @@
+package tests;
+
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -8,25 +10,28 @@ import static org.testng.AssertJUnit.assertEquals;
 public class HelloSelenideTest {
 
     @Test
-    public void OnAir(){
+    public void OnAir() {
         isChrome();
         open("http://ninjaplus-web:5000/login");
         assertEquals(title(), "Ninja+");
     }
+
     @Test
-    public void acessaGoogle(){
+    public void acessaGoogle() {
         isChrome();
         open("https://www.google.com.br/");
         assertEquals(title(), "Google");
     }
+
     @Test
-    public void acessaGlobo(){
+    public void acessaGlobo() {
         isChrome();
         open("https://www.globo.com/");
         assertEquals(title(), "globo.com - Absolutamente tudo sobre notícias, esportes e entretenimento");
     }
+
     @Test
-    public void acessaUol(){
+    public void acessaUol() {
         isChrome();
         open("https://www.uol.com.br/");
         assertEquals(title(), "UOL - O melhor conteúdo");

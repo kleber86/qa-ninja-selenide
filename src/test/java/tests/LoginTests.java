@@ -1,12 +1,19 @@
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+package tests;
+
+import com.codeborne.selenide.Configuration;
+import org.testng.annotations.*;
+import pages.LoginPage;
+import pages.SideBar;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.executeJavaScript;
+import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.isChrome;
 
 public class LoginTests {
+
+    protected static LoginPage login;
+    protected static SideBar side;
 
     @DataProvider(name = "login-alerts")
     public Object[][] loginProvider() {
@@ -18,17 +25,21 @@ public class LoginTests {
         };
     }
 
+    @BeforeMethod
+    public void start() {
+        Configuration.browser = "chrome";
+        Configuration.baseUrl = "http://ninjaplus-web:5000";
+        login = new LoginPage();
+        side = new SideBar();
+    }
+
     @Test
     public void shouldSeeLoggedUser() {
-        isChrome();
-        open("http://ninjaplus-web:5000");
-
-        $("input[name=email]").setValue("klebernascimento@outlook.com.br");
-        $("#passId").setValue("pwd123");
-        $(byText("Entrar")).click();
-
+        login
+                .open()
+                .with("klebernascimento@outlook.com.br", "pwd123");
         // Validação
-        $(".user .info span").shouldHave(text("Kleber"));
+        side.loggedUser().shouldHave(text("Kleber"));
     }
 
     // DDT (Data Driven Testing)
@@ -39,10 +50,14 @@ public class LoginTests {
         executeJavaScript("localStorage.clear()");
         open("http://ninjaplus-web:5000");
 
-        $("input[name=email]").setValue(email);
-        $("#passId").setValue(pass);
-        $(byText("Entrar")).click();
+        login
+                .open()
+                .with(email, pass)
+                .alert().shouldHave(text(expectAlert));
+    }
 
-        $(".alert span").shouldHave(text(expectAlert));
+    @AfterMethod
+    public void cleanUp() {
+        login.clearSession();
     }
 }
