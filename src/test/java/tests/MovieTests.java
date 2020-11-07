@@ -21,7 +21,8 @@ public class MovieTests extends BaseTest {
     @Test
     public void shouldRegisterANewMovie() {
         String title = "Jumanji - Proxima Fase";
+        String status = "Pré-venda";
 
-        movie.add().create(title);
+        movie.add().create(title, status);
     }
 }
