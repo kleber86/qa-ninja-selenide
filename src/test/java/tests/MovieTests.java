@@ -1,6 +1,7 @@
 package tests;
 
 import common.BaseTest;
+import model.MovieModel;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,15 +24,17 @@ public class MovieTests extends BaseTest {
 
     @Test
     public void shouldRegisterANewMovie() {
-        String title = "Jumanji - Proxima Fase";
-        String status = "Pré-venda";
-        String year = "2020";
-        String releasesDate = "16/01/2020";
-        List<String> cast = Arrays.asList("The Rock", "Jack Black", "Kevin Hart", "Karen Gillian", "Danny DeVito");
-        String plot = "Lorem Ipsum is simply dummy text of the printing and typesetting " +
-                "industry. Lorem Ipsum has been the industry's standard dummy text ever " +
-                "since the 1500s.";
 
-        movie.add().create(title, status, year, releasesDate, cast, plot);
+        MovieModel movieModel = new MovieModel(
+                "Jumanji - Proxima Fase",
+                "Pré-venda",
+                2020,
+                "16/01/2020",
+                Arrays.asList("The Rock", "Jack Black", "Kevin Hart", "Karen Gillian", "Danny DeVito"),
+                "Lorem Ipsum is simply dummy text of the printing and typesetting " +
+                        "industry. Lorem Ipsum has been the industry's standard dummy text ever " +
+                        "since the 1500s.");
+
+        movie.add().create(movieModel);
     }
 }

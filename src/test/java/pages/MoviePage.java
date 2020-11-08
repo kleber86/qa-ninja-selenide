@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import model.MovieModel;
 import org.openqa.selenium.Keys;
 
 import java.util.List;
@@ -16,13 +17,13 @@ public class MoviePage {
         return this;
     }
 
-    public MoviePage create(String title, String status, String year, String releaseDate, List<String> cast, String plot){
-        $("input[name=title]").setValue(title);
-        this.selectStatus(status);
-        $("input[name=year]").setValue(year);
-        $("input[name=release_date]").setValue(releaseDate);
-        this.input(cast);
-        $("textarea[name=overview]").setValue(plot);
+    public MoviePage create(MovieModel movie){
+        $("input[name=title]").setValue(movie.title);
+        this.selectStatus(movie.status);
+        $("input[name=year]").setValue(String.valueOf(movie.year));
+        $("input[name=release_date]").setValue(movie.releaseDate);
+        this.input(movie.cast);
+        $("textarea[name=overview]").setValue(movie.plot);
 
         return this;
     }
