@@ -21,9 +21,32 @@
    > Dados com o mesmo comportamento, a diferença está na entrada e saida dos dados.
      Com o Data provider existe um reaproveitamento do código utilizado facilitando e unificando a massa de dados.
      E mantendo a qualidade do codigo.
- 
+ ~~~java
+        @DataProvider(name = "login-alerts")
+        public Object[][] loginProvider() {
+            return new Object[][]{
+                    {"klebernascimento@outlook.com.br", "123456", "Usuário e/ou senha inválidos"},
+                    {"404@404.com", "pwd123", "Usuário e/ou senha inválidos"},
+                    {"klebernascimento@outlook.com.br", "", "Opps. Cadê a senha?"},
+                    {"", "pwd123", "Opps. Cadê o email?"}
+            };
+        }
+ ~~~
 ## Avançando na Automação
  - Padrão Page Objects
+   > Adição de mais um camada que fará o encapsulamento das iterações com a pagina web.
+   > Para cada pagina web haverá uma classe java.
+   ~~~java
+    public class LoginPage {
+    // Atributos e Metodos de interação com a pagina login
+    }
+   ~~~
+   
+      ~~~java
+       public class LoginTests {
+       // Atributos e Metodos de teses
+       }
+      ~~~
  - Nova feature do Ninja+
  
 #### Tecnologias utilizadas:
