@@ -22,13 +22,13 @@ public class MoviePage {
         this.selectStatus(movie.status);
         $("input[name=year]").setValue(String.valueOf(movie.year));
         $("input[name=release_date]").setValue(movie.releaseDate);
-        this.input(movie.cast);
+        this.inputCast(movie.cast);
         $("textarea[name=overview]").setValue(movie.plot);
 
         return this;
     }
 
-    private void input(List<String> cast){
+    private void inputCast(List<String> cast){
         SelenideElement element =  $(".cast");
         for(String actor : cast){
             element.setValue(actor).sendKeys(Keys.TAB);

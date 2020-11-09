@@ -35,7 +35,7 @@
 ## Avançando na Automação
  - Padrão Page Objects
    > Adição de mais um camada que fará o encapsulamento das iterações com a pagina web.
-   > Para cada pagina web haverá uma classe java.
+   > Para cada pagina web/ou componente haverá uma classe java.
    ~~~java
     public class LoginPage {
     // Atributos e Metodos de interação com a pagina login
@@ -48,6 +48,19 @@
        }
       ~~~
  - Nova feature do Ninja+
- 
+   > Criando uma classe para acessar recursos da pagina web. Preenchendo os campos do cadastro de filmes.
+ - Evoluindo código de testes
+   > Criando a classe BaseTest para ser utilizada em outras classes com herança.
+ - Buscando e filtrando WebElements
+   > Buscando e retornando uma lista de elementos com $$.
+      ~~~java
+       $$("ul li span")
+      ~~~
+ - Array de tags
+ > Preenchendo os campos ano de lançamento, data de lançamento, atores e sinopse do filme.
+   Usando ações do teclado, no exemplo foi o uso do TAB.
+ - Modelando massa de teste 
+ > Criando uma classe Model com atributos e construtor para a massa de dados.
+ - Incrementando a massa de teste
 #### Tecnologias utilizadas:
 > Docker, Kubuntu, TestNG, Selenium, Maven, Selenide, Java.
