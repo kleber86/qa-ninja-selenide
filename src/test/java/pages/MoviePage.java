@@ -18,6 +18,12 @@ public class MoviePage {
         return this;
     }
 
+    public MoviePage search(String value){
+        $("input[placeholder^=Pesquisar]").setValue(value);
+        $("#search-movie").click();
+        return this;
+    }
+
     public MoviePage create(MovieModel movie){
         $("input[name=title]").setValue(movie.title);
         this.selectStatus(movie.status);

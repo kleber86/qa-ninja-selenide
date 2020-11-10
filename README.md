@@ -69,6 +69,8 @@
    > Finalizando o cadastro do filme e validando o seu cadastro. Configuração do timeout caso o tempo de resposta da API seja alto.
  - Deu ruim na massa de teste! #SQN
    > Com a massa de dados fixa, ao executar o teste pela segunda vez apresenta falha. 
-     Para resolução desta falha foi implementada uma funcionalidade para excluir a massa antes da execução do teste.                                      
+     Para resolução desta falha foi implementada uma funcionalidade para excluir a massa antes da execução do teste.
+ - Estratégias para cenários de busca
+   > Controle de dados via SQL.                                                                           
 #### Tecnologias utilizadas:
 > Docker, Kubuntu, TestNG, Selenium, Maven, Selenide, Java.

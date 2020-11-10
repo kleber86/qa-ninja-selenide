@@ -2,9 +2,10 @@ package tests;
 
 import libs.DataBase;
 import common.BaseTest;
-import libs.DataBase;
 import model.MovieModel;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -15,6 +16,8 @@ import static com.codeborne.selenide.Condition.visible;
 public class MovieTests extends BaseTest {
 
 
+    private DataBase dataBase;
+
     @BeforeMethod
     public void setup() {
         login
@@ -24,27 +27,39 @@ public class MovieTests extends BaseTest {
         side.loggedUser().shouldHave(text("Kleber"));
     }
 
+    @BeforeSuite
+    public void delorean(){
+        dataBase = new DataBase();
+        dataBase.resetMovies();
+    }
+
     @Test
     public void shouldRegisterANewMovie() {
 
         MovieModel movieModel = new MovieModel(
-                "Jumanji - Proxima Fase",
+                "Avengers",
                 "Pré-venda",
-                2020,
-                "16/01/2020",
-                Arrays.asList("The Rock", "Jack Black", "Kevin Hart", "Karen Gillian", "Danny DeVito"),
+                2012,
+                "16/01/2012",
+                Arrays.asList("Robert Downey, Jr", "Chris Evans", "Scarlett Johansson", "Jeremy Renner"),
                 "Lorem Ipsum is simply dummy text of the printing and typesetting " +
                         "industry. Lorem Ipsum has been the industry's standard dummy text ever " +
                         "since the 1500s.",
-                "/jumanji.jpg"
+                "/avengers.jpg"
         );
-
-        DataBase dataBase = new DataBase();
-        dataBase.deleteMovie(movieModel.title);
 
         movie
                 .add()
                 .create(movieModel)
                 .items().findBy(text(movieModel.title)).shouldBe(visible);
     }
+
+
+    @Test
+    public void shouldReturnTwoMovie(){
+        movie.search("Batman").items().shouldHaveSize(2);
+    }
+
+    @AfterMethod
+    public void cleanUp() { login.clearSession(); }
 }
