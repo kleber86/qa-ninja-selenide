@@ -57,15 +57,18 @@
        $$("ul li span")
       ~~~
  - Array de tags
- > Preenchendo os campos ano de lançamento, data de lançamento, atores e sinopse do filme.
+   > Preenchendo os campos ano de lançamento, data de lançamento, atores e sinopse do filme.
    Usando ações do teclado, no exemplo foi o uso do TAB.
  - Modelando massa de teste 
- > Criando uma classe Model com atributos e construtor para a massa de dados.
+   > Criando uma classe Model com atributos e construtor para a massa de dados.
  - Incrementando a massa de teste
- > Mapeando diretórios para o upload de uma imagem.
+   > Mapeando diretórios para o upload de uma imagem.
  - Upload de arquivos
- > Implementação do upload de uma imagem com o tipo File.
+   > Implementação do upload de uma imagem com o tipo File.
  - Cadastrando e validando registros
- > Finalizando o cadastro do filme e validando o seu cadastro. Configuração do timeout caso o tempo de resposta da API seja alto.
+   > Finalizando o cadastro do filme e validando o seu cadastro. Configuração do timeout caso o tempo de resposta da API seja alto.
+ - Deu ruim na massa de teste! #SQN
+   > Com a massa de dados fixa, ao executar o teste pela segunda vez apresenta falha. 
+     Para resolução desta falha foi implementada uma funcionalidade para excluir a massa antes da execução do teste.                                      
 #### Tecnologias utilizadas:
 > Docker, Kubuntu, TestNG, Selenium, Maven, Selenide, Java.

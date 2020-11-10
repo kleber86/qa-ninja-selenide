@@ -1,6 +1,8 @@
 package tests;
 
+import libs.DataBase;
 import common.BaseTest;
+import libs.DataBase;
 import model.MovieModel;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -36,6 +38,9 @@ public class MovieTests extends BaseTest {
                         "since the 1500s.",
                 "/jumanji.jpg"
         );
+
+        DataBase dataBase = new DataBase();
+        dataBase.deleteMovie(movieModel.title);
 
         movie
                 .add()
