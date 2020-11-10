@@ -71,6 +71,7 @@
    > Com a massa de dados fixa, ao executar o teste pela segunda vez apresenta falha. 
      Para resolução desta falha foi implementada uma funcionalidade para excluir a massa antes da execução do teste.
  - Estratégias para cenários de busca
-   > Controle de dados via SQL.                                                                           
+   > Controle de dados via SQL.  
+ - Reports ricos com Allure                                                                         
 #### Tecnologias utilizadas:
 > Docker, Kubuntu, TestNG, Selenium, Maven, Selenide, Java.
