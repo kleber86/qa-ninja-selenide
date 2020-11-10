@@ -1,5 +1,6 @@
 package model;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class MovieModel {
     public String releaseDate;
     public List<String> cast;
     public String plot;
-    public String cover;
+    public File cover;
 
 
     public MovieModel(String title, String status, int year,
@@ -21,7 +22,7 @@ public class MovieModel {
         this.releaseDate = releaseDate;
         this.cast = cast;
         this.plot = plot;
-        this.cover = this.coverPath() + cover;
+        this.cover = new File(this.coverPath() + cover);
     }
 
     private String coverPath(){

@@ -62,5 +62,8 @@
  - Modelando massa de teste 
  > Criando uma classe Model com atributos e construtor para a massa de dados.
  - Incrementando a massa de teste
+ > Mapeando diretórios para o upload de uma imagem.
+ - Upload de arquivos
+ > Implementação do upload de uma imagem com o tipo File.
 #### Tecnologias utilizadas:
 > Docker, Kubuntu, TestNG, Selenium, Maven, Selenide, Java.
