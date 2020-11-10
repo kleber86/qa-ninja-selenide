@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import model.MovieModel;
 import org.openqa.selenium.Keys;
@@ -26,7 +27,12 @@ public class MoviePage {
         $("textarea[name=overview]").setValue(movie.plot);
         this.upload(movie.cover);
 
+        $("#create-movie").click();
         return this;
+    }
+
+    public ElementsCollection items(){
+        return $$("table tbody tr");
     }
 
     private void upload(File cover){

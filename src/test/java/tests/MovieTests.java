@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 
 public class MovieTests extends BaseTest {
 
@@ -36,6 +37,9 @@ public class MovieTests extends BaseTest {
                 "/jumanji.jpg"
         );
 
-        movie.add().create(movieModel);
+        movie
+                .add()
+                .create(movieModel)
+                .items().findBy(text(movieModel.title)).shouldBe(visible);
     }
 }

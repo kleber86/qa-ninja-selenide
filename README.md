@@ -65,5 +65,7 @@
  > Mapeando diretórios para o upload de uma imagem.
  - Upload de arquivos
  > Implementação do upload de uma imagem com o tipo File.
+ - Cadastrando e validando registros
+ > Finalizando o cadastro do filme e validando o seu cadastro. Configuração do timeout caso o tempo de resposta da API seja alto.
 #### Tecnologias utilizadas:
 > Docker, Kubuntu, TestNG, Selenium, Maven, Selenide, Java.
