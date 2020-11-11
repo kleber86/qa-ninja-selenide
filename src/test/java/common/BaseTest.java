@@ -14,6 +14,8 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.InputStream;
+import java.util.Properties;
 
 import static com.codeborne.selenide.Selenide.screenshot;
 
@@ -24,9 +26,17 @@ public class BaseTest {
 
     @BeforeMethod
     public void start() {
-        Configuration.browser = "chrome";
-        Configuration.baseUrl = "http://ninjaplus-web:5000";
-        Configuration.timeout = 30000;
+        Properties prop = new Properties();
+        InputStream inputFile = getClass().getClassLoader().getResourceAsStream("config.properties");
+        try {
+            prop.load(inputFile);
+        }catch (Exception e){
+            System.out.println("Falha no carregamento do config.propeties. Trace => " + e.getMessage());
+        }
+
+        Configuration.browser = prop.getProperty("browser");
+        Configuration.baseUrl = prop.getProperty("url");
+        Configuration.timeout = Long.parseLong(prop.getProperty("timeout"));
 
         login = new LoginPage();
         side = new SideBar();
