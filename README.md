@@ -72,6 +72,28 @@
      Para resolução desta falha foi implementada uma funcionalidade para excluir a massa antes da execução do teste.
  - Estratégias para cenários de busca
    > Controle de dados via SQL.  
- - Reports ricos com Allure                                                                         
+ - Reports ricos com Allure
+    > Configurando o Allure para criação de relatórios. Obs: Meu código foi diferente do mostrado em aula, porém a funcionalidade foi implementada corretamente.
+ - Screenshots do Selenide
+   > Adicionando Sreenshots aos relatórios do Allure.
+   ~~~java
+       @AfterMethod
+       public void finish(){
+           String tempShot = screenshot("temp_shot");
+   
+           try {
+               BufferedImage bimage = ImageIO.read(new File(tempShot));
+               ByteArrayOutputStream baos = new ByteArrayOutputStream();
+   
+               ImageIO.write(bimage, "png", baos);
+               byte [] finalShot = baos.toByteArray();
+   
+               io.qameta.allure.Allure.addAttachment("Evidência", new ByteArrayInputStream(finalShot));
+           }catch (Exception e){
+               System.out.println("Deu erro ao anexar o Screenshot. Trace => " + e.getMessage());
+           }
+       }
+   ~~~
+ - MutiBrowser	                                                                                                   
 #### Tecnologias utilizadas:
-> Docker, Kubuntu, TestNG, Selenium, Maven, Selenide, Java.
+> Docker, Kubuntu, TestNG, Selenium, Maven, Selenide, Java, Allure Framework.

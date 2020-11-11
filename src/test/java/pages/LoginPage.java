@@ -26,6 +26,6 @@ public class LoginPage {
     }
 
     public void clearSession() {
-        executeJavaScript("localStorage.clear()");
+        executeJavaScript("localStorage.clear();");
     }
 }
